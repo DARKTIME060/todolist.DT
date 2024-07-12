@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+body {
+    background: rgb(26, 26, 26);
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+    &__rotate {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 8px solid;
+        border-color: #000 #0000;
+        animation: l1 1s infinite;
+    }
+}
+
+@keyframes l1 {
+    to {
+        transform: rotate(.5turn)
+    }
+}
+
+.navbar {
+    background: rgb(13, 13, 13);
+
+    & .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+
+
+    &__rocket {
+        width: 43px;
+        height: 36px;
+    }
+
+    &__title {
+        color: rgb(78, 168, 222);
+        font-family: "Inter";
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+}
+
+
+.create {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 172px;
+
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        border: 1px solid rgb(13, 13, 13);
+        border-radius: 8px;
+        background: rgb(38, 38, 38);
+        width: 638px;
+        height: 54px;
+        padding: 16px;
+        outline: none;
+        color: rgb(128, 128, 128);
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        border-radius: 8px;
+        background: rgb(30, 111, 159);
+        width: 90px;
+        height: 52px;
+        color: rgb(242, 242, 242);
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 140%;
+        padding: 16px;
+    }
+}
+
+
+.header {
+    padding-bottom: 50px;
+
+    &__left,
+    &__right {
+        display: flex;
+        gap: 8px;
+    }
+
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 92px;
+        margin-bottom: 24px;
+
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgb(51, 51, 51);
+            color: rgb(217, 217, 217);
+            font-family: "Inter";
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 15px;
+            padding: 0 8px;
+        }
+
+
+        &-title {
+            color: rgb(78, 168, 222);
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+        }
+
+        &-text {
+            color: rgb(130, 132, 250);
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+        }
+    }
+
+
+    &__bottom {
+        width: 736px;
+        height: 244px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-top: 1px solid rgb(51, 51, 51);
+        margin: 24px 0px;
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &.active {
+                display: none;
+            }
+        }
+
+
+        &-icon {
+            width: 56px;
+            height: 56px;
+            color: rgb(128, 128, 128);
+        }
+
+        &-title {
+            color: rgb(128, 128, 128);
+            font-family: "Inter";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        &-text {
+            color: rgb(128, 128, 128);
+            font-family: "Inter";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+    }
+}
+
+.card {
+    width: 736px;
+    height: 72px;
+    box-sizing: border-box;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+    background: rgb(38, 38, 38);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+
+    &__btn {
+        width: 17.45px;
+        height: 17.45px;
+        margin-left: 20px;
+        margin-right: 15px;
+        border-radius: 50%;
+        margin-top: -5px;
+        border: 2px solid rgb(78, 168, 222);
+        background: rgb(38, 38, 38);
+        color: rgb(38, 38, 38);
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    &__btn_active {
+        width: 17.45px;
+        height: 17.45px;
+        margin-left: 20px;
+        margin-right: 15px;
+        border-radius: 50%;
+        margin-top: -5px;
+        font-size: 10px;
+        color: white;
+        background: rgb(78, 168, 222);
+        cursor: pointer;
+    }
+
+    &__text {
+        color: rgb(242, 242, 242);
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: start;
+        width: 632px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__text_active {
+        color: rgb(128, 128, 128);
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        text-decoration-line: line-through;
+        width: 632px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__del {
+        background: rgb(38, 38, 38);
+        margin-right: 20px;
+        font-size: 15px;
+        margin-left: 18px;
+        color: rgb(128, 128, 128);
+        cursor: pointer;
+    }
+}
